@@ -11,9 +11,9 @@ namespace Bio
         public void TicketPris()
         {
             Console.WriteLine(" Our ticket prices are  ");
-            Console.WriteLine("Junior  : 80  ");
-            Console.WriteLine("Senior  : 90  ");
-            Console.WriteLine("Adult  : 120  ");
+            Console.WriteLine("  Junior  : 80 :- ");
+            Console.WriteLine("  Senior  : 90 :- ");
+            Console.WriteLine("  Adult  : 120 :- ");
         }
 
         public int TicketCount()
