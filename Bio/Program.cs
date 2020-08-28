@@ -25,7 +25,8 @@ namespace Bio
                 case 1:
                     // start program
                     Ticket ticket = new Ticket();
-                ticket.TicketPris();
+                    ticket.TicketPris();
+                    ticket.Demo();
                     Console.WriteLine($" The total price is   {ticket.TotalTicketsCost()}");
                    
 
