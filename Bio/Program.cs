@@ -7,7 +7,7 @@ namespace Bio
         static void Main(string[] args)
         {
             Console.WriteLine("Welcom to the main menu!");
-            Console.WriteLine("choose 1 to continue , choose 2 to type a sentence 10 times or 0 to close!");
+            Console.WriteLine("choose 1 to continue , choose 2 to type a sentence 10 times, 3 to chhose last word att sentence  or 0 to close!");
             CustomerChoose();
         }
 
@@ -35,6 +35,14 @@ namespace Bio
                     Console.WriteLine(" enter the sentence that you want to type 10 times");
                     Repeat repeat = new Repeat();
                     repeat.Iteraiton();
+                  break;
+
+
+                case 3:
+                    //Menyval 3: Det tredje ordet
+                    Console.WriteLine(" enter the sentence that you want to get the last word printed");
+                    StringDevider stringDevider = new StringDevider();
+                    Console.WriteLine(stringDevider.LastwordBuilder());
 
                     break;
                 default:
