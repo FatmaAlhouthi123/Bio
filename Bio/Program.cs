@@ -1,25 +1,44 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Bio
 {
     class Program
     {
+      
         static void Main(string[] args)
         {
+            bool x = true;
+
+
             Console.WriteLine("Welcom to the main menu!");
-            Console.WriteLine("choose 1 to continue , choose 2 to type a sentence 10 times, 3 to chhose last word att sentence  or 0 to close!");
-            CustomerChoose();
+            while (x)
+            {
+                Console.WriteLine("choose 1 to continue , choose 2 to type a sentence 10 times, 3 to chhose last word att sentence  or 0 to close!");
+                CustomerChoose();
+
+
+                Console.WriteLine("what do you want to do type 1 to go to main menu or 0 eo exit program");
+                int whatNext = int.Parse(Console.ReadLine());
+                if (whatNext == 0) x = false;
+                else x = true;
+            }
         }
 
         static void CustomerChoose()
         {
              int choose = int.Parse(Console.ReadLine());
+           
 
-            switch (choose)
+                switch (choose)
             {
-
+               
                 case 0:
                     // close program
+                  
+                
                     break;
 
                 case 1:
@@ -27,9 +46,11 @@ namespace Bio
                     Ticket ticket = new Ticket();
                     ticket.TicketPris();
                     ticket.Demo();
-                    Console.WriteLine($" The total price is   {ticket.TotalTicketsCost()}");
-                    break;
+                        Console.WriteLine($" The total price is   {ticket.TotalTicketsCost()}");
+                        break;
 
+                   
+                    
                 case 2:
                     //Menyval 2: Upprepa tio gånger
                     Console.WriteLine(" enter the sentence that you want to type 10 times");
@@ -50,9 +71,9 @@ namespace Bio
        
                     CustomerChoose();
                     break;
-
-
             }
+                
         }
+        
     }
 }
